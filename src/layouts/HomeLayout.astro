@@ -1,0 +1,33 @@
+---
+import Header from "../components/Header.astro";
+import Cdnimage from "../components/Cdnimage.astro";
+import { ViewTransitions } from "astro:transitions";
+import Footer from "../components/Footer.astro";
+
+const { title, description } = Astro.props;
+---
+
+<html class="dark:bg-[rgb(34,33,37)]" lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <meta name="description" content={description} />
+        <title>{title}</title>
+        <ViewTransitions />
+    </head>
+
+    <body class="dark:bg-[rgb(34,33,37)] dark:text-[rgb(245,245,245)]">
+        <Header />
+
+        <Cdnimage
+            width="1000"
+            height="666,67"
+            src="andinov/t7ang7rqghs4fckpvyuu"
+            alt="test"
+        />
+
+        <Footer />
+    </body>
+</html>
